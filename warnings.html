@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="About the PKI/certificate warnings on your ephemeral VPN.">
+	<title>About PKI Warnings</title>
+</head>
+<body>
+<main>
+<nav><a href="/">JustHideMe</a> | by: <a href="https://siege.org">SdO</a></nav>
+<article>
+<header>
+<h1>About PKI Warnings</h1>
+</header>
+<section>
+<p><a href="https://en.wikipedia.org/wiki/Public_key_infrastructure"><abbr title="Public Key Infrastructure">PKI</abbr></a> is the system encrypted web sites rely on to assert their trustworthyness. It is intended to provide an assurance that you don't end up looking at an imposter when you type "<a href="https://justhide.me">https://justhide.me</a>" into your browser. It does this through a network of <a href="https://en.wikipedia.org/wiki/Certificate_authority">Certificate Authorities</a> whom your web browser has trusted to say "this web site is really what it says it is." If you visit an encrypted web site that does not have the seal of approval (in the form of a cryptographic digital signature) from an authority your browser trusts, you get a warning message.</p>
+<p>In the case of a JustHideMe ephemeral VPN, the certificate authority we use is <i>also</i> ephemeral. It is created inside the VPN's Docker container when the container. It is therefore impossible for your browser to know in advance that it is okay to trust this CA's authority to approve anything. That is why, when you visit a JustHideMe client config download site, you get a warning message.</p>
+<p>While you should <i><b><u>never</u></b></i> make a habit of ignoring warning messages, it is possible to easily verify that it is safe to proceed inspite of the warning on a JustHideMe download link.</p>
+</section>
+<section>
+<h2>A block of text like this appears beneath the download link</h2>
+<pre>
+<font color="red">CONFIRM BEFORE IGNORING ANY SECURITY WARNINGS:</font>
+	READ THIS:	https://justhideme.github.io/warnings.html
+	Cert Name:	web.EH5XrAA2.justhide.me
+	Cert SHA1:	AA:D3:7F:1B:77:13:13:3B:5E:A5:4D:62:25:8F:42:FB:26:28:D7:8F
+	Issued by:	ca.EH5XrAA2.justhide.me
+	Issuer SHA1:	37:B5:5A:10:7B:AF:60:8B:D0:B0:37:9C:78:B1:0A:47:4E:79:42:AD
+</pre>
+</section>
+<section>
+<h2>Compare this to what your browser says</h2>
+<figure>
+	<img src="/certificate.png" />
+	<figcaption>Fig1. Top of the certificate information dialogue.</figcaption>
+</figure>
+<figure>
+	<img src="/fingerprint.png" />
+	<figcaption>Fig2. Bottom of the certificate information bottom.</figcaption>
+</figure>
+</section>
+<section>
+<h3>To display this in <a href="https://www.google.com/chrome">Chrome</a></h3>
+<p></p>
+</section>
+<section>
+<h3>To display this in <a href="https://microsoft.com/edge">Edge</a></h3>
+<p></p>
+</section>
+<section>
+<h3>To display this in <a href="https://www.mozilla.org/firefox">Firefox</a></h3>
+<p></p>
+</section>
+<section>
+<h3>To display this in <a href="https://apple.com/safari">Safari</a></h3>
+<p></p>
+</section>
+
+</article>
+</main>
+
+</body>
+</html>

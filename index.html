@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>JustHideMe</title>
+	<link href="/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Easily create an ephemeral 'burner' VPN.">
+	<title>JustHideMe</title>
 </head>
 <body>
-<h1>Placeholder</h1>
+<nav>by: <a href="https://siege.org">SdO</a></nav>
+<h1>JustHideMe</h1>
+<p>Easily create an ephemeral "burner" VPN.</p>
+<h3>Step 1</h3>
+<p>Create a cloud VM on <a href="http://www.vultr.com/?ref=7052201">Vultr</a>, <a href="https://m.do.co/c/98aaaa07c494">DigitalOcean</a>, <a href="https://ovh.com">OVH</a>, <a href="https://atlantic.net">Atlantic.net</a>, etc... (pick an image with <a href="https://docker.com">Docker</a> preinstalled)
+<h3>Step 2</h3>
+<p>Log in and run the bootstrap:</p>
+<div><code>curl -fs justhide.me | bash</code></div>
+<h3>Step 3</h3>
+<p>Destroy the VM when you're done.</p>
+<h2>How it all works...</h2>
+<h3>The Bootstrap</h3>
+<p>JustHideMe turns the complex process of setting up a VPN server into a simple one-line shell script by way of its bootstrap process. The bootstrap is open source, and if you're not comfortable doing the 'curl | bash' thing we provide alternatives.</p>
+<p>&raquo; <a href="https://github.com/justhideme/bootstrap">https://github.com/justhideme/bootstrap</a></p>
+<h3>The Image</h3>
+<p>Our 'ephemeral-vpn' Docker image is the core of the JustHideMe process. Upon launching, the image configures and starts a dispostable <a href="https://openvpn.net">OpenVPN</a> server. Once it's running, the image allows you to download the necessary client configuration, either via copy-and-paste, or <a href="/warnings.html">secure download</a> (both URL and QRCode are provided).</p>
+<p>Complete documentation is found here:</a>
+<p>&raquo; <a href="https://github.com/justhideme/ephemeral-vpn">https://github.com/justhideme/ephemeral-vpn</a></p>
 </body>
 </html>
